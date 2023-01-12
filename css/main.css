@@ -97,38 +97,42 @@ textarea {
 
 
 html {
-  background-color: #fff;
-  height: 100%;
+    background-color: #333;
+    height: 100%;
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 2em;
-  font-size: 1.25em;
-  height: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 2em;
+    height: 100%;
 }
 
 .wrapper {
-  /*add display:flex and set justify-content to space-between*/
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
+    /*add display:flex and set justify-content to space-between*/
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
 }
 
-.div-1, .div-2, .div-3 {
-  /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
-  height: 300px;
-  display: flex;
-  width: 30%;
-  justify-content: center;
-  align-items: center;
+.div-1,
+.div-2,
+.div-3 {
+    /*give the divs a width of 30%, add display:flex, set justify-content and align-items to center*/
+    color: #fff;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    height: 200px;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
 }
 
-
+.div-2 {
+    border-left: solid white 1px;
+    border-right: solid white 1px;
+}
 
 
 /* ==========================================================================
@@ -197,8 +201,10 @@ body {
 
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
 }
 
 .clearfix:after {
@@ -212,9 +218,9 @@ body {
    ========================================================================== */
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -225,11 +231,13 @@ body {
    ========================================================================== */
 
 @media print {
+
     *,
     *:before,
     *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+        color: #000 !important;
+        /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
